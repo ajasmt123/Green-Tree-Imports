@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <style>
+      @layer base {
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          overscroll-behavior: none;
+        }
+
+        main>:first-child {
+          margin-top: 0 !important;
+        }
+
+        main>:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .font-serif-luxury {
+        font-family: 'Cinzel', serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        "darkMode": "class",
+        "theme": {
+          "extend": {
+            "colors": {
+              "surface-container-high": "#e8e8e5",
+              "inverse-surface": "#242624",
+              "error-container": "#ffdad6",
+              "tertiary": "#6b5f00",
+              "on-tertiary-fixed-variant": "#514700",
+              "inverse-on-surface": "#f1f1ee",
+              "primary-fixed": "#86fb9d",
+              "on-surface-variant": "#3e4a3e",
+              "on-tertiary": "#ffffff",
+              "background": "#f7f6f2",
+              "surface-dim": "#dadad7",
+              "inverse-primary": "#69de84",
+              "on-primary-container": "#f7fff3",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#201c00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f1f0eb",
+              "on-surface": "#1a1c1b",
+              "on-secondary-fixed": "#00210b",
+              "on-secondary-container": "#007436",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e2e3e0",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#005224",
+              "surface-bright": "#f9f9f6",
+              "surface-container-highest": "#dfded9",
+              "on-primary-fixed": "#00210a",
+              "surface-tint": "#006d30",
+              "on-error": "#ffffff",
+              "surface": "#f7f6f2",
+              "secondary-container": "#95f8a9",
+              "outline-variant": "#c9c8c2",
+              "on-background": "#1a1c1b",
+              "on-tertiary-container": "#484000",
+              "primary-container": "#00873c",
+              "surface-container": "#eae9e4",
+              "tertiary-fixed": "#fce445",
+              "tertiary-fixed-dim": "#dec727",
+              "tertiary-container": "#c1ac00",
+              "outline": "#6e7a6d",
+              "primary-fixed-dim": "#69de84",
+              "secondary": "#006d32",
+              "primary": "#0b9444",
+              "secondary-fixed-dim": "#79db8f",
+              "on-primary-fixed-variant": "#005322",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#95f8a9",
+              "sand": "#eeebe2",
+              "terracotta": "#b55b38",
+              "alabaster": "#fdfdfc"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "spacing": {
+              "margin": "2.5rem",
+              "gutter": "1.5rem",
+              "gutter-sm": "1rem",
+              "space-xs": "0.25rem",
+              "space-xl": "2.5rem",
+              "margin-sm": "1rem",
+              "space-lg": "1.5rem",
+              "space-md": "1rem",
+              "space-sm": "0.5rem"
+            },
+            "fontFamily": {
+              "headline-lg": ["Plus Jakarta Sans"],
+              "title-md": ["Plus Jakarta Sans"],
+              "display-lg-mobile": ["Plus Jakarta Sans"],
+              "body-lg": ["Inter"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "headline-sm": ["Plus Jakarta Sans"],
+              "label-sm": ["Inter"],
+              "label-md": ["Inter"],
+              "body-md": ["Inter"],
+              "body-sm": ["Inter"],
+              "display-lg": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+              "headline-lg": ["32px", {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "600"
+              }],
+              "title-md": ["16px", {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }],
+              "display-lg-mobile": ["34px", {
+                "lineHeight": "42px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }],
+              "body-lg": ["18px", {
+                "lineHeight": "28px",
+                "fontWeight": "400"
+              }],
+              "headline-lg-mobile": ["26px", {
+                "lineHeight": "34px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }],
+              "headline-sm": ["20px", {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }],
+              "label-sm": ["12px", {
+                "lineHeight": "16px",
+                "letterSpacing": "0.04em",
+                "fontWeight": "600"
+              }],
+              "label-md": ["14px", {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "500"
+              }],
+              "body-md": ["15px", {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }],
+              "body-sm": ["13px", {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }],
+              "display-lg": ["48px", {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }],
+              "headline-md": ["24px", {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }]
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      <div class="bg-primary text-on-primary py-1 px-4 text-center">
+        <p class="font-label-sm text-label-sm tracking-wide"> Complimentary Express Shipping on Orders Over $100 | Direct Farm-to-Table Afghan Dried Fruits &amp; Saffron | Wholesale &amp; B2B Inquiries Welcome</p>
+      </div>
+      <div class="h-20 max-w-[1280px] mx-auto px-margin-sm lg:px-margin flex items-center justify-between gap-gutter font-title-md">
+        <div class="flex items-center gap-space-md shrink-0">
+          <a class="flex items-center gap-space-sm group" data-path="home" href="#">
+            <img alt="Green Tree Imports" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYx8Emn7MbAA7iRPbp5Lw2HgSAp5whLOLI6LWfBKKoyUd7pGvFXYqOkpBhUnkzHwODvdoXzHm2AhaPri_urYFbCaQ5B03Pjwbig7nEwf_b5_jETj2N7IGG36Ynw0NWOvEbQM4-e0xwwc-eTH9EGEJnWtHUDSbKI0vjfa4KlVOvNEwVSIYhOVXdklpXEGFfwgdfwfYS4Ra4H7Ngtwo0Ze3GfWXzvk27LVEMl5dm7HWX1eZ0xQIzMxRNjuNFkEMWdicpgA" />
+            <span class="font-headline-sm text-headline-sm text-primary tracking-tight hidden sm:inline-block font-semibold">Green Tree Traders</span>
+          </a>
+        </div>
+        <nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary">
+          <a class="font-title-md text-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-space-xs font-medium tracking-wide" data-path="home" href="#">Home</a>
+          <a class="font-title-md text-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-space-xs font-medium tracking-wide" data-path="shop" href="#">
+            <span class="">Shop</span>
+            <span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">Fresh</span>
+          </a>
+          <a class="font-title-md text-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 font-medium tracking-wide" data-path="export-and-b2b" href="#">Export &amp; B2B</a>
+          <!-- <a class="font-title-md text-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 font-medium tracking-wide" data-path="from-our-journal" href="#">From Our Journal</a> -->
+          <a class="font-title-md text-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 font-medium tracking-wide" data-path="contact" href="#">Contact</a>
+        </nav>
+        <div class="flex items-center gap-space-md shrink-0">
+          <button aria-label="Search Catalog" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-full flex items-center justify-center" type="button">
+            <span class="material-symbols-outlined text-[22px]">search</span>
+          </button>
+          <div class="hidden md:flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container-low px-2.5 py-1.5 rounded-lg tracking-wide">
+            <span class="material-symbols-outlined text-[18px]">public</span>
+            <span class="">AUD / Global</span>
+          </div>
+          <button aria-label="Wishlist" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-full flex items-center justify-center" type="button">
+            <span class="material-symbols-outlined text-[22px]">favorite</span>
+            <span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px] flex items-center justify-center font-bold">0</span>
+          </button>
+          <button aria-label="Cart" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-full flex items-center justify-center" type="button">
+            <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+            <span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">2</span>
+          </button>
+          <a class="hidden sm:inline-flex items-center justify-center bg-primary text-on-primary font-title-md text-xs uppercase tracking-[0.18em] font-semibold px-5 py-2.5 rounded shadow-sm hover:bg-primary-container transition-colors" data-path="export-and-b2b" href="#">Trade Enquiry</a>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-background">
+      <div class="flex flex-col w-full">
+        <!-- COLLECTION HERO / EDITORIAL HEADER -->
+        <section class="w-full bg-surface-container-low px-margin-sm lg:px-margin py-12 md:py-16">
+          <div class="max-w-[1280px] mx-auto flex flex-col gap-6">
+            <!-- Eyebrow & Live Provenance Badge -->
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              </div>
+              <div class="inline-flex items-center gap-2 bg-surface px-3 py-1 rounded-full shadow-sm"></div>
+            </div>
+            <!-- Main Display Title & Editorial Monograph -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+              <div class="lg:col-span-8 space-y-3">
+                <h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-serif-luxury font-medium"> Shop All Harvests &amp; Botanicals </h1>
+              </div>
+              <div class="lg:col-span-4 flex lg:justify-end gap-3 font-label-md text-label-md">
+                <div class="bg-surface p-4 rounded-xl shadow-sm flex flex-col gap-1 w-full sm:w-auto">
+                  <div class="flex items-center gap-2 text-primary font-semibold"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Quick Category Navigation Horizontal Pills -->
+            <div class="pt-4 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+              <button class="bg-primary text-on-primary px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all hover:bg-primary-container"> All Lots (18) </button>
+              <button class="bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all"> Afghan Dried Fruits (7) </button>
+              <button class="bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all"> Heritage Saffron (3) </button>
+              <button class="bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all"> Botanical Distillates (2) </button>
+              <button class="bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all"> Raw Nuts &amp; Kernels (3) </button>
+              <button class="bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all"> Gift Curations &amp; Flights (3) </button>
+              <button class="bg-surface-container text-on-surface hover:bg-surface-container-high px-5 py-2.5 rounded-full font-title-md text-sm whitespace-nowrap shadow-sm transition-all flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-primary">inventory_2</span> B2B Bulk Cartons </button>
+            </div>
+          </div>
+        </section>
+        <!-- FILTER & SORT TOOLBAR -->
+        <section class="sticky top-20 z-30 w-full bg-surface/95 backdrop-blur-md px-margin-sm lg:px-margin py-3.5 shadow-sm">
+          <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+            <!-- Filter Selectors -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none">
+              <!-- Origin dropdown simulated trigger -->
+              <button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-colors whitespace-nowrap">
+                <span class="text-on-surface-variant">Origin:</span>
+                <span class="font-semibold">All Terroirs</span>
+                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+              </button>
+              <!-- Processing Method -->
+              <button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-colors whitespace-nowrap">
+                <span class="text-on-surface-variant">Process:</span>
+                <span class="font-semibold">Shade / Sun Cured</span>
+                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+              </button>
+              <!-- Dietary Standards -->
+              <button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-colors whitespace-nowrap">
+                <span class="text-on-surface-variant">Standards:</span>
+                <span class="font-semibold">Lab Certified Organic</span>
+                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+              </button>
+              <!-- Price Range -->
+              <button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-colors whitespace-nowrap">
+                <span class="text-on-surface-variant">Price:</span>
+                <span class="font-semibold">$15 – $90 AUD</span>
+                <span class="material-symbols-outlined text-[18px]">tune</span>
+              </button>
+            </div>
+            <!-- Right Metadata & View Controls -->
+            <div class="flex items-center justify-between md:justify-end gap-4 shrink-0">
+              <span class="font-label-sm text-label-sm text-on-surface-variant"> Showing <strong class="text-on-surface font-semibold">12</strong> of 18 Lots </span>
+              <!-- Sort Select -->
+              <div class="relative inline-flex items-center">
+                <select class="bg-surface-container-low text-on-surface font-label-md text-label-md py-2 pl-3 pr-8 rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+                  <option>Sort: Featured Harvests</option>
+                  <option>Sort: Newest Arrivals</option>
+                  <option>Sort: Price: Low to High</option>
+                  <option>Sort: Price: High to Low</option>
+                  <option>Sort: Lot Provenance</option>
+                </select>
+                <span class="material-symbols-outlined absolute right-2 pointer-events-none text-[18px] text-on-surface-variant">unfold_more</span>
+              </div>
+              <!-- View layout toggles -->
+              <div class="hidden sm:flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+                <button class="p-1.5 rounded bg-surface text-primary shadow-xs" title="Grid 4-up">
+                  <span class="material-symbols-outlined text-[18px]">grid_view</span>
+                </button>
+                <button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface" title="Editorial Catalog List">
+                  <span class="material-symbols-outlined text-[18px]">view_agenda</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- PRODUCT ARCHIVE GRID SECTION (PART 1: Products 1-4) -->
+        <!-- EDITORIAL MONOGRAPH CALLOUT BANNER -->
+        <section class="w-full px-margin-sm lg:px-margin my-6"></section>
+        <!-- PRODUCT ARCHIVE GRID SECTION (PART 2: Products 5-8 with Context Images) -->
+        <section class="w-full px-margin-sm lg:px-margin py-6">
+          <div class="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <!-- Product 1: Golden Shakarpara Apricots -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Golden Shakarpara Apricots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1URIfA29r_UKKtZEnxTvdOujRithxaUSoPDyfg66oXcPT52VkZZMqP9yOjprlWOrGT_9A439FCfGSbZpUxs6gus7G0uxon7giFYeB55ovItRJSFXhacw02rRFEiow4L947RHYRC1ozof8HAXnoSzWrqFXIe6TbagoU24CjTdXguQtH3OE_L6YxBY2F1i1vZWx30pd7WEuKdcfz5_AXrBwvkjugkjpGvWAG3qXCCqqGgklqBAWeB9wSYGMk" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Golden Shakarpara Apricots</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Unsulfured heirloom stone-cured halves from Balkh. Concentrated honey nectar notes with a velvety, chewy bite.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$22.00 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 2: Wild Sun-Dried Mountain Figs -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Wild Sun-Dried Mountain Figs (Anjeer)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UTd_cBn6NkJ8W1-fyP1k-6SPTbUTq-dAQgMN4FNbz-FY4pnquDQXCd8lsT3U6XNk_F-0R6j4kXlVATZUEFmoF6OaYqm9QtvxeeMEoFe_v_dmfYaC3O69i1EgTpTb79Q_gKAFqi1VAEreW3Kv7-dx_t_M0bAKIczhFc6CRCoppwCyyKhwhvA04WW65hYLLuRFQVv02QygDG3Mj0wLJ40QHLC1JIuEin_tRAfCeOEjysU5kKT3UBOw2yrw" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Wild Mountain Figs (Anjeer)</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">High-altitude white figs solar-dried whole on mountain slopes with crystallized caramel notes.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$24.00 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 3: Authentic Afghan Green Kishmish -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Authentic Afghan Green Kishmish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Wu9ha9FTaM8vHvVP7dMn7D14Pqs_JoSFBz6UdZzRdx9kegcKi1w_MtBOK6XeR0SU1vJGfQOTcuGR2syTPAEXIb_Kdi2d_uls6olL2BbOC4-QFBCbFDa56FIl12ZIqQ81Wqz3dziDDYqZQQJk9I7F-91canSKWSH57ubzTpGgWZBxX-8Jd-QDLuwP5viJZMYLVlllTbDdGw8xNp63z2plqNW25tuS_cPvpugjDjR7Zr-2xeqVtGcjljrFw" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Authentic Afghan Green Kishmish</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Earthen kishmish-khana harvested green grapes, preserved in natural jade coloration through perforated brick airflow.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$19.50 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 4: Raw Mamra Almonds & Kunduz Pistachios -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Raw Mamra Almonds &amp; Kunduz Pistachios" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VrPH4OaLYFwX5POgAdPo5oYrCfKbMKHwdjAo8-58h2L964ObiJfvVUYxYYhsw4u7F2_iCOq4yOPRm9RRBQpP4gU5bdO1aUXbdHV4M3R3NptkzfZVeo-t8iq5BgOZvB-S0y0-CzC9OV8vUV2goibMLWKLCS3d_PyLJqGUui7qyZ0QNM_zeawmAaFDzeajP3QZ9lAlIeBA0nR-ImkdHdm2nHhI5tyNbLNIIPvUUdH_ZnYsKjIdJfzex5vQ" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Raw Mamra Almonds &amp; Pistachios</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Cold-cracked Kunduz harvest rich in essential heirloom oils with distinct mineral crunch and fragrance.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$28.50 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 5: Persian Super Negin Saffron -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Persian Super Negin Saffron" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xhg__l2Vb0yWzfzUaT5pOymrh9OlrBGQ7xoV_jufUnDT__WdS3hnfcGa5E0U42qqcbQjcRhUkngyuR_7dR3UNbY_43t_dVEJm5Bv9WC6h9zGjPx6hMr8_bBJzYsEn8jf4GZZDy8V7RQKrMOs86rIDjBsKndxcnmna7xOgBGNzCEix25be1fGReoXDZX4WWyjk5Ic4bYYuJZrSzkuk6wVZHEVGE32h3QQv2_Epso2uukgESbI9jEJYTLYQ" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Persian Super Negin Saffron</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Grade 1 Khorasan stigmas with intense natural crocin coloration and deep floral sweetness.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$34.00 <span class="font-normal text-xs text-on-surface-variant">/ 5g Jar</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 6: Kashan Golab Damask Rosewater -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Kashan Golab Damask Rosewater" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UHE9jwcpzyCB65rIILQR23igQc_rFIB-4aCgcD4wBkHkhQrZmRN7bc7xUF90nM-9DL-O3NFqQy7wbLk4sOTZLpJYXY289ljR2aY06QgBblwuJMpjxhNlbKca6LZ7LP9t-S6TOihtZfXjfhL1whldZNAcbWNv8vfwQy9iryCpnRFZHrbZEkwBro-rwerARD2kUCspqaTvt_FvGpwbma7GprAMg0STYxsfvP8iNULc-N8dmOtqAAJg1_YXA" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Kashan Golab Damask Rosewater</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Copper-distilled Damask essence from heritage Iranian mountain valleys, delicate and pure.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$28.00 <span class="font-normal text-xs text-on-surface-variant">/ 250ml</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 7: Royal Kandahar Green Raisins -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Royal Kandahar Green Raisins" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WO1b2nvS4sT2bD0Aes-rRkwBxhkoa1vNiElmRpe3cMPyR-A4ad0-wAneDs13A81DpwXJnXMGGI7DVIJs1GE4T9z2XM0f2H0DzlauLKVaMMp8fXPFvGD4yGQ_xZb9ovI_AkU-4huDTtD7lG2MdF1xzleQgq4K8s9kVGD0RUVxq9Dno5K2spAbcCr51NF5zN_53ZilqzHPYRmm6Fk2Ew8PFRPp0eVGI4nbtrwqN8Xws3gathDZXULd0-yA" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Royal Kandahar Green Raisins</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Signature 40-day adobe shade-cured emerald Kishmish with delicate natural tart sweetness.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$18.50 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 8: Kandahar Reserve Gift Box Duo -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Kandahar Reserve Gift Box Duo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xlz1h9uiyV7KcKEpgI6PPhA1Yl4L28wfzUW5ziJMPhBX80Wy3nYI2qY6WozHN5Q24lO7D33v2FtnK4NNvo9zWuEc_7824vTW5h76p51nJti9FLsPR-lwpqnw8FzVdcjriNIkeqfIUjREnnlkoj-dvSM6myDSWxxfAKnHGOIzfOhxHVlgUubovQNGXfV24MBbr-lfJBQKw2kGPlTjrz-9rJbYVowh6XUIMWFqdiDi2yRiGWH8E9TmdAdm8" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Kandahar Reserve Gift Box Duo</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Dual presentation featuring 200g jar of Green Raisins and 200g jar of Shakarpara Apricots in linen packaging.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$38.00 <span class="font-normal text-xs text-on-surface-variant">/ Gift Box</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 9: Balkh Sun-Dried Royal Peaches -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Balkh Sun-Dried Royal Peaches" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1URIfA29r_UKKtZEnxTvdOujRithxaUSoPDyfg66oXcPT52VkZZMqP9yOjprlWOrGT_9A439FCfGSbZpUxs6gus7G0uxon7giFYeB55ovItRJSFXhacw02rRFEiow4L947RHYRC1ozof8HAXnoSzWrqFXIe6TbagoU24CjTdXguQtH3OE_L6YxBY2F1i1vZWx30pd7WEuKdcfz5_AXrBwvkjugkjpGvWAG3qXCCqqGgklqBAWeB9wSYGMk" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Balkh Sun-Dried Royal Peaches</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Naturally sliced orchard peaches cured under gentle arid breezes. Intense floral tang with natural pectin softness.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$21.00 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 10: Panjshir Mountain Mulberry Harvest -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Panjshir Mountain Mulberry Harvest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UTd_cBn6NkJ8W1-fyP1k-6SPTbUTq-dAQgMN4FNbz-FY4pnquDQXCd8lsT3U6XNk_F-0R6j4kXlVATZUEFmoF6OaYqm9QtvxeeMEoFe_v_dmfYaC3O69i1EgTpTb79Q_gKAFqi1VAEreW3Kv7-dx_t_M0bAKIczhFc6CRCoppwCyyKhwhvA04WW65hYLLuRFQVv02QygDG3Mj0wLJ40QHLC1JIuEin_tRAfCeOEjysU5kKT3UBOw2yrw" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Panjshir Mountain Mulberry Harvest</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Sun-cured white mulberries from glacial terraces of Panjshir Valley. Honeyed crisp chewiness with clean finish.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$17.50 <span class="font-normal text-xs text-on-surface-variant">/ 200g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 11: Herat Black Kishmish Reserve -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Herat Black Kishmish Reserve" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Wu9ha9FTaM8vHvVP7dMn7D14Pqs_JoSFBz6UdZzRdx9kegcKi1w_MtBOK6XeR0SU1vJGfQOTcuGR2syTPAEXIb_Kdi2d_uls6olL2BbOC4-QFBCbFDa56FIl12ZIqQ81Wqz3dziDDYqZQQJk9I7F-91canSKWSH57ubzTpGgWZBxX-8Jd-QDLuwP5viJZMYLVlllTbDdGw8xNp63z2plqNW25tuS_cPvpugjDjR7Zr-2xeqVtGcjljrFw" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Herat Black Kishmish Reserve</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Seedless purple-black mountain raisins cured beneath direct western sun. Deep molasses and berry sweetness.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$19.00 <span class="font-normal text-xs text-on-surface-variant">/ 250g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+            <!-- Product 12: Herat Wild Pine Nuts (Chilgoza) -->
+            <div class="flex flex-col justify-between group border border-[#e6e4de] bg-[#f7f6f2] p-5 hover:border-primary transition-all duration-300">
+              <div class="relative aspect-[1/1] w-full mb-5 overflow-hidden bg-[#eeebe2]">
+                <button aria-label="Bookmark" class="absolute top-2 right-2 z-10 text-on-surface-variant hover:text-on-surface p-1 bg-white/70 rounded-full transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                </button>
+                <img alt="Herat Wild Pine Nuts (Chilgoza)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VrPH4OaLYFwX5POgAdPo5oYrCfKbMKHwdjAo8-58h2L964ObiJfvVUYxYYhsw4u7F2_iCOq4yOPRm9RRBQpP4gU5bdO1aUXbdHV4M3R3NptkzfZVeo-t8iq5BgOZvB-S0y0-CzC9OV8vUV2goibMLWKLCS3d_PyLJqGUui7qyZ0QNM_zeawmAaFDzeajP3QZ9lAlIeBA0nR-ImkdHdm2nHhI5tyNbLNIIPvUUdH_ZnYsKjIdJfzex5vQ" />
+              </div>
+              <div class="text-left flex-grow flex flex-col justify-start space-y-2">
+                <h3 class="font-serif-luxury text-base text-on-surface font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">Herat Wild Pine Nuts (Chilgoza)</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-2">Hand-foraged eastern mountain pine kernels, renowned for rich buttery texture and aromatic pine resin finish.</p>
+                <div class="pt-1 font-semibold text-sm text-on-surface">$36.00 <span class="font-normal text-xs text-on-surface-variant">/ 200g</span>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button class="w-full py-2.5 bg-primary text-white hover:bg-primary-container text-xs font-semibold tracking-wider uppercase transition-colors duration-200 rounded-none">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- PRODUCT ARCHIVE GRID SECTION (PART 3: Products 9-12) -->
+        <!-- PAGINATION & CATALOG CONTROLS -->
+        <section class="w-full px-margin-sm lg:px-margin py-8">
+          <div class="max-w-[1280px] mx-auto flex flex-col items-center gap-6">
+            <!-- Central Load More Archival Lots Button -->
+            <!-- Classical Page Stepper -->
+            <div class="flex items-center gap-2">
+              <button class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant disabled:opacity-40 flex items-center justify-center cursor-not-allowed" disabled="">
+                <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              </button>
+              <button class="w-10 h-10 rounded-lg bg-primary text-on-primary font-semibold flex items-center justify-center"> 1 </button>
+              <button class="w-10 h-10 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-semibold flex items-center justify-center transition-colors"> 2 </button>
+              <button class="w-10 h-10 rounded-lg bg-surface hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors">
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </button>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant"> Displaying lots 1 through 12 of 18 active harvests. Next batch scheduled for Q3 release. </p>
+          </div>
+        </section>
+        <!-- INSTITUTIONAL & WHOLESALE B2B CALLOUT FOOTNOTE -->
+        <section class="w-full px-margin-sm lg:px-margin pt-6 pb-16">
+          <div class="max-w-[1280px] mx-auto bg-surface-container-low rounded-2xl p-8 lg:p-12 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="space-y-3 max-w-2xl">
+              <div class="inline-flex items-center gap-2 bg-surface px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[16px]">domain</span> Commercial &amp; Wholesale Division
+              </div>
+              <h3 class="font-headline-lg text-headline-lg font-serif-luxury text-on-surface"> Institutional Procurement &amp; Foodservice Tiers </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Supplying Michelin-rated restaurants, master chocolatiers, and artisan grocers with bulk single-origin cartons (5kg, 10kg, and 25kg bulk masters). Each commercial dispatch arrives accompanied by HPLC crocin lab sheets, phytosanitary certificates, and export biosecurity documentation. </p>
+            </div>
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 w-full sm:w-auto">
+              <a class="px-6 py-3.5 bg-primary text-on-primary font-title-md text-sm rounded-lg hover:bg-primary-container transition-colors text-center font-semibold flex items-center justify-center gap-2 shadow-xs" href="#">
+                <span class="material-symbols-outlined text-[18px]">description</span> Request B2B Catalog &amp; Pallet Rates </a>
+              <a class="px-6 py-3.5 bg-surface text-on-surface font-title-md text-sm rounded-lg hover:bg-surface-container-high transition-colors text-center font-medium shadow-xs" href="#"> Sample Request for Foodservice </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="w-full bg-[#087A3A] text-on-primary border-t border-outline-variant/20">
+      <div class="max-w-[1280px] mx-auto px-margin-sm lg:px-margin pt-16 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl">
+          <div class="lg:col-span-2 space-y-space-md">
+            <div class="flex items-center gap-space-sm">
+              <img alt="Green Tree Imports" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr0pPhIlj-AeCrOWjYV6S5Li-Vp0NT5gwkjoy6LZRCJrJ8Sv3GlTfrwANpxw_ozq71b09v58CFDMVq_eRZeYz1Y2M5tMTSRlbt29Bv0TSsuWr6Hoy4BXthgSBKFf-7wZQGfeGpGnHor-C2qDprzWHhf5S543QsJoQ3m4f9HkFW3HTtt3xkd8zqdy2BKffZbhvG7G7w6yaVxWVOhdyB8Fhy9cmedCYzXmvNzvJ13-RNiuehbB9ZkfWbdtIeYRscJ9j-dw" />
+              <span class="font-headline-sm text-headline-sm text-on-primary">Green Tree Imports</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-primary/80 max-w-md leading-relaxed">Green Tree Imports connects authentic origins with global tables. Sourcing the world's finest Afghan dried fruits and premium Iranian specialty products with Australian business integrity.</p>
+            <div class="pt-space-sm space-y-1 font-body-sm text-body-sm text-on-primary/90">
+              <p class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px]">mail</span>
+                <span class="">support@greentreeimports.com</span>
+              </p>
+              <p class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px]">call</span>
+                <span class="">+61 (0)2 8399 4410</span>
+              </p>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-title-md text-title-md text-on-primary mb-space-md uppercase tracking-wider text-xs">Shop</h4>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-primary/80">
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">All Products</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">Best Sellers</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">New Arrivals</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">Afghan Raisins</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">Dried Figs &amp; Apricots</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">Saffron &amp; Spices</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="shop" href="#">Gift Sets</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-title-md text-title-md text-on-primary mb-space-md uppercase tracking-wider text-xs">Company</h4>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-primary/80">
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="about-us" href="#">About Us</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="our-story" href="#">Our Story</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="about-us" href="#">How We Source</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="export-and-b2b" href="#">Export &amp; Global Trade</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="export-and-b2b" href="#">B2B Catalog</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-title-md text-title-md text-on-primary mb-space-md uppercase tracking-wider text-xs">Customer Care</h4>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-primary/80">
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Shipping &amp; Handling</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Return Policy</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="contact" href="#">FAQ</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Order Tracking</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="about-us" href="#">Food Safety &amp; Quality</a>
+              </li>
+              <li class="">
+                <a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Contact Support</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5 class="font-label-sm text-label-sm text-on-primary uppercase tracking-wider mb-space-xs">Newsletter</h5>
+              <div class="flex items-center bg-surface-container-lowest rounded-lg overflow-hidden p-1">
+                <input class="w-full px-2 text-on-surface font-body-sm text-body-sm bg-transparent outline-none" placeholder="Your email address" type="email" />
+                <button aria-label="Subscribe" class="bg-primary text-on-primary p-1.5 rounded flex items-center justify-center" type="button">
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-on-primary/20 flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary/75">
+          <p class="">© 2025 Green Tree Imports Pty Ltd. All rights reserved.</p>
+          <div class="flex items-center gap-space-md text-xs">
+            <span class="bg-surface-container-lowest text-on-surface px-2 py-1 rounded font-semibold">VISA</span>
+            <span class="bg-surface-container-lowest text-on-surface px-2 py-1 rounded font-semibold">MC</span>
+            <span class="bg-surface-container-lowest text-on-surface px-2 py-1 rounded font-semibold">AMEX</span>
+            <span class="bg-surface-container-lowest text-on-surface px-2 py-1 rounded font-semibold">APPLE PAY</span>
+            <span class="bg-surface-container-lowest text-on-surface px-2 py-1 rounded font-semibold">PAYPAL</span>
+          </div>
+          <div class="flex items-center gap-space-lg">
+            <a class="hover:text-on-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
+            <a class="hover:text-on-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
